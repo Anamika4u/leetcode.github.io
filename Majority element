@@ -1,0 +1,15 @@
+int Solution::majorityElement(const vector<int> &A) {
+    int n=A.size();
+    int c=0;
+    int option=0;
+    for(int i=0;i<n;i++)
+    {
+        if(c==0)
+        option=A[i];
+        if(A[i]==option)
+        c++;
+        else
+        c--;
+    }
+    return option;
+}
